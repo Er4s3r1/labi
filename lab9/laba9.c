@@ -51,7 +51,7 @@ bool success(int x, int y) {
 
 int main() {
     int i = 20, j = 0, l = 11, previous_i, previous_j, previous_l;
-    for (int k = 1; k < 50; k++) {
+    for (int k = 1; k < 51; k++) {
         if (success(i, j)) {
             printf("Óäà÷íî! %d\n", k);
             return 0;
