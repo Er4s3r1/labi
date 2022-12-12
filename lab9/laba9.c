@@ -20,7 +20,7 @@ int sgn(int x) {
     return (x > 0) ? 1 : -1;
 }
 
-double sqrt (double n) { //упрощенная функция корня используя метод Ньютона
+double sqrt (double n) { //СѓРїСЂРѕС‰РµРЅРЅР°СЏ С„СѓРЅРєС†РёСЏ РєРѕСЂРЅСЏ РёСЃРїРѕР»СЊР·СѓСЏ РјРµС‚РѕРґ РќСЊСЋС‚РѕРЅР°
     double z = 1;
     double nz;
     for (;;) {
@@ -51,9 +51,9 @@ bool success(int x, int y) {
 
 int main() {
     int i = 20, j = 0, l = 11, previous_i, previous_j, previous_l;
-    for (int k = 0; k < 50; k++) {
+    for (int k = 1; k < 50; k++) {
         if (success(i, j)) {
-            printf("Удачно! %d\n", k);
+            printf("Г“Г¤Г Г·Г­Г®! %d\n", k);
             return 0;
         }
         previous_i = i; previous_j = j; previous_l = l;
@@ -66,9 +66,9 @@ int main() {
         l = abs(previous_i + previous_j - previous_l - k) *
             sign(previous_i - previous_j + previous_l - k);
     }
-    printf("Не попал\n");
-    printf("Константа i: %d\n", previous_i);
-    printf("Константа j: %d\n", previous_j);
-    printf("Константа l: %d\n", previous_l);
+    printf("ГЌГҐ ГЇГ®ГЇГ Г«\n");
+    printf("ГЉГ®Г­Г±ГІГ Г­ГІГ  i: %d\n", previous_i);
+    printf("ГЉГ®Г­Г±ГІГ Г­ГІГ  j: %d\n", previous_j);
+    printf("ГЉГ®Г­Г±ГІГ Г­ГІГ  l: %d\n", previous_l);
     return 0;
 }
